@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpotiSpeech.PlayerPage">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <Label x:Name="label" Text="Media Player" Padding="32" HorizontalOptions="Center"/>
+            <StackLayout Padding="16" >
+                <Frame BorderColor="Black" HorizontalOptions="Fill" HeightRequest="200"/>
+            </StackLayout>
+
+            <StackLayout Padding="16">
+                <Label Margin="0,16,0,0" Text="Now Playing" HorizontalOptions="Center"/>
+                <Frame BorderColor="Black" HorizontalOptions="Fill"/>
+            </StackLayout>
+            <Grid> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".1*"/>
+                    <ColumnDefinition Width=".8*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="1">
+                    <ImageButton x:Name="play" Source="icon_play.png" HeightRequest="64" HorizontalOptions="Center"  Clicked="OnPlayClicked" CornerRadius="10"/>
+                </StackLayout>
+                <StackLayout Grid.Column="2">
+                    <ImageButton x:Name="pause" Source="icon_pause.png" HeightRequest="64" HorizontalOptions="Center"  Clicked="OnPauseClicked" CornerRadius="10"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

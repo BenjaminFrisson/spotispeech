@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpotiSpeech.MainPage">
+
+    <StackLayout VerticalOptions="StartAndExpand">
+        <StackLayout Margin="0,40,0,20" HorizontalOptions="Fill">
+            <Image Source="logo_small.png" VerticalOptions="Center" HeightRequest="64" />
+        </StackLayout>
+        <Label Text="Record your voice to play music" FontSize="Title" Padding="30,10,30,10"/>
+        <StackLayout HorizontalOptions="Fill" Orientation="Horizontal" Margin="10" Padding="0,64,0,48">
+            <Frame BorderColor="Black" HorizontalOptions="Fill" >
+                <StackLayout Orientation="Vertical"> 
+                    <Label Text="Commande enregistrée"/>
+                    <Editor WidthRequest="280" AutoSize="Disabled" Text="Ecouter Daft Punk" IsReadOnly="True" FontSize="Small"/>
+                </StackLayout>
+            </Frame>
+            <ImageButton Source="right_arrow.png" VerticalOptions="Center" HeightRequest="64" HorizontalOptions="End" Clicked="OnArrowClicked"/>
+        </StackLayout>
+        <StackLayout Padding="32">
+            <Button Text="Enregistrer la voix"
+                BackgroundColor="Black"
+                TextColor="White"
+                CornerRadius="10"
+                Clicked="OnButtonClicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
